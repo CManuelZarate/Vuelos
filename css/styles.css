@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Poppins:wght@300;400;600;700&display=swap');
+
+body{
+  font-family: 'Poppins',sans-serif ;
+}
+/*FLEXBOX*/
+.container{
+  display: flex;
+}
+
+.row{
+  flex-direction: row;
+}
+.column{
+  flex-direction: column;
+}
+
+/* header */
+
+header{
+  background: url("../assets/images/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:aliceblue;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+}
+
+.header{
+  background-color:rgba(0, 0, 0, 0.2) ;
+}
+
+.menu{
+  margin-left: auto;
+  cursor: pointer;
+  display: var(--show,none);
+}
+
+.navbar{
+  justify-content: space-between;
+  align-items: center;
+  color:aliceblue;
+}
+
+.brand{
+  padding: 2rem;
+}
+
+.links{
+  justify-content: space-between;
+}
+
+.nav-item{
+  list-style: none;
+  margin-right: 2rem;
+}
+.nav-link{
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.nav-close {
+  display: var(--show,none);
+}
+
+.header-content{
+  padding: 20%;
+  text-align: center;
+}
+
+.header-title{
+  font-size: 3rem;
+}
+
+.header-mesagge{
+  margin: 2rem 0 2rem 0;
+}
+
+.header-btn{
+  background-color:rgb(167, 111, 38);
+  border: none;
+  border-radius: 2rem;
+  color: aliceblue;
+  padding: 0.7rem;
+}
+
+/* Acerca*/
+
+.about{
+  justify-content: space-around;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+.s-about{
+  padding :1.5rem;
+  text-align: center;
+}
+.icon{
+  width: 100px;
+}
+
+/*Offers*/
+.offers{
+  align-items: center;
+  background-color: darkgoldenrod;
+  padding: 2rem;
+}
+
+table{
+  width: 90%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+th,td{
+  width: 20%;
+  height: 2rem;
+  padding: 1rem 0;
+}
+
+/*clients*/
+.clients{
+  padding: 2rem;
+}
+
+.clients > h2{
+  padding: 2rem;
+}
+
+.slice{
+  align-items: center;
+}
+
+.client-content{
+  position: relative;
+}
+
+.arrow{
+  width: 50px;
+  height: 50px;
+}
+
+
+.client{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+.client-show{
+  opacity: 1;
+  position: relative;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.client-image{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  padding-right: 2rem;
+}
+
+.align{
+  justify-content: center;
+  padding: 0 2.5rem;
+}
+
+/*Questions*/
+.questions{
+  text-align: center;
+  padding: 2rem;
+}
+.box-head{
+  justify-content:space-between ;
+  align-items: center;
+  padding: 1.5rem 0rem;
+}
+
+.dropdown{
+  background: url("../assets/images/bxs-down-arrow-circle.svg");
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+}
+
+.dropdown:hover{
+  cursor: pointer;
+}
+
+.question{
+  border:1px solid rgba(105, 84, 13, 0.753);
+  margin: 1rem 2rem;
+  padding: 0rem 2rem ;
+  overflow: hidden;
+  transition: padding 0.5s;
+}
+
+.question-content{
+  height: 0;
+}
+
+.dropdown--rotate{
+  transform: rotate(180deg);
+}
+
+.question-padding-add{
+  padding: 2rem 2rem;
+}
+
+/*Footer*/
+footer{
+  background: rgb(102, 82, 39);
+  padding: 2rem;
+}
+
+.footer-message{
+  color: aliceblue;
+  padding: 2rem;
+}
+
+.subscribe{
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.subscribe-input{
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 1rem;
+}
+
+.register{
+  background: whitesmoke;
+  color: rgb(102, 82, 39);
+  border-radius: 20px;
+  border: none;
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.register:hover{
+  cursor: pointer;
+}
+
+.copy{
+  margin-top: 1rem;
+  justify-content:space-around;
+}
+
+
+.facebook{
+  background: url("../assets/images/Facebook_f_logo__2019_.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
+}
+.twitter{
+  background: url("../assets/images/twitter-logo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+.youtube{
+  background: url("../assets/images/youtube-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+/* MEDIA QUERIES*/
+@media (max-width:800px){
+  .menu{
+    display: block;
+  }
+
+  .navbar{
+
+  }
+
+  .links--menu{
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+    opacity: 0; 
+    pointer-events: none;
+    transition: .7s opacity;
+  }
+
+  .nav-item{
+    display:block;
+  }
+
+  .nav-link-show{
+    --show: block;
+    opacity:1 ;
+    pointer-events: unset;
+  }
+
+  .nav-close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+
+}
